@@ -51,7 +51,6 @@ const getStepStatus = (step: Step) => {
   return "Pending"
 }
 
-// Method to return the correct icon based on step number
 const getIconForStep = (stepNumber: number) => {
   switch (stepNumber) {
     case 1:
@@ -63,7 +62,7 @@ const getIconForStep = (stepNumber: number) => {
     case 4:
       return IconStepFour
     default:
-      return IconStepOne // default icon
+      return IconStepOne
   }
 }
 
@@ -71,10 +70,10 @@ const getIconColor = (step: Step) => {
   return {
     strokeColor: step.completed
       ? '#0891b2'
-      : (step.number === props.currentStep ? '#0891b2' : '#E7E7E6'), // Active step gets blue
+      : (step.number === props.currentStep ? '#0891b2' : '#E7E7E6'),
     fillColor: step.completed
       ? '#0891b2'
-      : (step.number === props.currentStep ? '#0891b2' : '#18191C'), // Active step gets light blue
+      : (step.number === props.currentStep ? '#0891b2' : '#18191C'),
     size:36
   }
 }
